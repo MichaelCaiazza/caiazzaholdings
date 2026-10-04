@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Caiazza Holdings LLC, Wichita, Kansas.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231A1A18'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-weight='700' font-size='26' fill='%23F6F4F0' text-anchor='middle'%3ECH%3C/text%3E%3C/svg%3E">
+<title>Caiazza Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap">
+<style>
+/* Layout: single reversed (Ink) screen — mark, name, then a ruled row with location and email.
+   Brand-fixed palette (Ink / Paper / Stone only); deliberately one dark look regardless of viewer theme. */
+:root{
+  --ink:#1A1A18; --paper:#F6F4F0; --stone:#8A867F;
+  --rule:rgba(246,244,240,.16);
+  --font:'Syne', Helvetica, Arial, sans-serif;
+  --gutter:clamp(16px,5vw,64px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--font);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,p{margin:0}
+:focus-visible{outline:2px solid var(--stone);outline-offset:3px}
+
+main{min-height:100%;padding:clamp(48px,10vw,128px) var(--gutter);display:flex;flex-direction:column;justify-content:center;gap:clamp(40px,7vw,88px)}
+.mark{display:grid;place-items:center;background:var(--paper);color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1;
+  width:clamp(96px,16vw,168px);height:clamp(96px,16vw,168px);font-size:clamp(2.6rem,6.4vw,4.4rem)}
+h1{font-weight:600;font-size:clamp(2.6rem,7vw,5.6rem);line-height:1;letter-spacing:-.03em;text-wrap:balance}
+h1 span{color:var(--stone)}
+a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}
+.row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--rule);font-size:1.05rem}
+.row p{padding:22px 24px 0 0;min-width:0;overflow-wrap:anywhere}
+.row p + p{padding-left:24px;border-left:1px solid var(--rule)}
+@media (max-width:600px){
+  .row{grid-template-columns:1fr}
+  .row p{padding:16px 0}
+  .row p + p{padding-left:0;border-left:0;border-top:1px solid var(--rule)}
+}
+</style>
+
+</head>
+<body>
+<main>
+  <span class="mark" role="img" aria-label="Caiazza Holdings">CH</span>
+  <h1>Caiazza <span>Holdings</span></h1>
+  <div class="row">
+    <p>Wichita, Kansas</p>
+    <p><a href="mailto:info@caiazzaholdings.com">info@caiazzaholdings.com</a></p>
+  </div>
+</main>
+</body>
+</html>
